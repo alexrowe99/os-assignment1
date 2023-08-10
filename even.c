@@ -4,18 +4,18 @@
 #include <signal.h>
 
 void hup_handler(int sig) {
-	printf("Ouch!");
+	printf("/nOuch!");
 }
 
 void int_handler(int sig) {
-	printf("Yeah!");
+	printf("/nYeah!");
 }
 
 int main(int argc, char *argv[]) {
 	signal(SIGHUP, hup_handler);
 	signal(SIGINT, int_handler);
 	int n = atoi(argv[1]);
-	for (int i=0;i<n;i++) {
+	for (int i=0;i<n*2;i+=2) {
 		printf("%d\n", i);
 		sleep(5);
 	}
