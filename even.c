@@ -4,11 +4,11 @@
 #include <signal.h>
 
 void hup_handler(int sig) {
-	printf("/nOuch!");
+	printf("Ouch!\n");
 }
 
 void int_handler(int sig) {
-	printf("/nYeah!");
+	printf("Yeah!\n");
 }
 
 int main(int argc, char *argv[]) {
